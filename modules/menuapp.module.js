@@ -1,1 +1,4 @@
-angular.module('MenuApp', ['Data']);
+(function() {
+    'use strict';
+    angular.module('MenuApp', ['data']);
+})();

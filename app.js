@@ -59,7 +59,7 @@
                     error = true;
 
                     return {
-                        'error': 'an unexpecteed error ocurred'
+                        'error': 'an unexpected error ocurred'
                     };
                 });
             } else {

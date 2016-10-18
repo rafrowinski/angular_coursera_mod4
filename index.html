@@ -5,12 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/bootstrap.min.css">
         <link rel="stylesheet" href="styles/styles.css">
-        <script src="angular.min.js"></script>
-        <script src="modules/manuApp.js"></script>
-        <script src="modules/data.js"></script>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script src="angular.js"></script>
+        <script src="angular-ui-router.min.js"></script>
+
+        <script src="modules/data.module.js"></script>
+        <script src="modules/menuapp.module.js"></script>
+
+        <script src="components/categories.component.js"></script>
+        <script src="components/items.component.js"></script>
+        <script src="services/menudata.service.js"></script>
+        <script src="routes.js"></script>
     </head>
     <body ng-app="MenuApp">
-        <div class="container" ng-controller="NarrowItDownController as query">
+        <!-- <div class="container" ng-controller="NarrowItDownController as query">
             <div class="row">
                 <h1>Narrow Down Your Chinese Menu Choice</h1>
 
@@ -35,15 +43,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <!-- Bonus loader (see Bonus section of the assignment) -->
-                    <items-loader-indicator ng-show="query.loading"></items-loader-indicator>
+        <!-- <items-loader-indicator ng-show="query.loading"></items-loader-indicator>
 
                     <!-- found-items should be implemented as a component -->
-                    <found-items found-items="query.found" on-remove="query.remove(index)" ng-if="query.itemsDisplayedAs == 'list' && !query.loading && query.isInitiated"></found-items>
+        <!-- <found-items found-items="query.found" on-remove="query.remove(index)" ng-if="query.itemsDisplayedAs == 'list' && !query.loading && query.isInitiated"></found-items>
                     <found-items-table found-items="query.found" on-remove="query.remove" ng-if="query.itemsDisplayedAs == 'table' && !query.loading && query.isInitiated"></found-items-table>
                 </div>
             </div>
 
-        </div>
+        </div> -->
 
     </body>
 </html>
