@@ -1,6 +1,5 @@
-<h2>{{itemsCtrl.groupName}}</h2>
 <ol class="list-group" >
-    <li ng-repeat="item in itemsCtrl.items" class="list-group-item list-group-item-success">
+    <li ng-repeat="item in $ctrl.items" class="list-group-item list-group-item-success">
         <ul class="list-group">
             <li ng-repeat="(key, value) in item" class="list-group-item">
                 <b>{{ key }}:</b> {{value}}</li>

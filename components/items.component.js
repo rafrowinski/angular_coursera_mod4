@@ -1,6 +1,9 @@
 (function() {
     'use strict';
-    angular.module('data').component('items', ItemsComponent);
-
-    function ItemsComponent() {};
+    angular.module('data').component('itemsList', {
+        templateUrl: 'templates/list.template.html',
+        bindings: {
+            items: '<'
+        }
+    });
 })();
