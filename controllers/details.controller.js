@@ -2,7 +2,7 @@
     'use strict';
     angular.module('data')
         .controller('DetailsController', DetailsController)
-        .constant('noImageUrl', "/images/noimage.jpg");
+        .constant('noImageUrl', "{{ site.baseurl }}/images/noimage.jpg");
     DetailsController.$inject = ['ImageService', 'images', 'itemDetails', 'noImageUrl'];
 
     function DetailsController(ImageService, images, itemDetails, noImageUrl) {
