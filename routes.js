@@ -35,6 +35,16 @@
                         return MenuDataService.getItemsForCategory($stateParams.categoryId);
                     }]
                 }
+            })
+            .state('details',{
+              url: '/details/{name}',
+              templateUrl: 'templates/items.template.html',
+              controller: 'ItemsController as itemsCtrl',
+              resolve: {
+                  items: ['ImageService','$stateParams', function(ImageService, $stateParams) {
+                      return ImageService.getImage($stateParams.name);
+                  }]
+              }
             });
     }
 })();
