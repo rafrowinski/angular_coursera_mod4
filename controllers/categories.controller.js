@@ -1,0 +1,12 @@
+(function() {
+    'use strict';
+    angular.module('data')
+        .controller('CategoriesController', CategoriesController);
+    CategoriesController.$inject = ['categories'];
+
+    function CategoriesController(categories) {
+        var controller = this;
+        controller.categories = categories.data;
+    };
+
+})();
