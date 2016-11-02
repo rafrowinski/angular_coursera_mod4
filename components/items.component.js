@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular.module('data').component('itemsList', {
-        templateUrl: 'templates/list.template.html',
+        templateUrl: 'templates/item-list.template.html',
         bindings: {
             items: '<'
         }

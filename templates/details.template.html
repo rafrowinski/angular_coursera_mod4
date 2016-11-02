@@ -1,5 +1,7 @@
+<h5>Little bonus. It doesn't follow the requirements so please don't grade it :)</h5>
 <ul class="list-group">
-  <li><img src="{{image}}" alt="{{item.name}} image"></li>
-    <li ng-repeat="(key, value) in item" class="list-group-item">
-        <b>{{ key }}:</b> {{value}}</li>
+    <li class="list-group-item"><img class="list-group-item" src="{{detailCtrl.image}}" alt="{{detailCtrl.item.name}} image"></li>
+    <li ng-repeat="(key, value) in detailCtrl.item" ng-if="value" class="list-group-item">
+        <b>{{ key }}:</b>
+        {{value}}</li>
 </ul>

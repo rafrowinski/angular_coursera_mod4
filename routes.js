@@ -31,20 +31,26 @@
                 templateUrl: 'templates/items.template.html',
                 controller: 'ItemsController as itemsCtrl',
                 resolve: {
-                    items: ['MenuDataService','$stateParams', function(MenuDataService, $stateParams) {
+                    items: ['MenuDataService', '$stateParams', function(MenuDataService, $stateParams) {
                         return MenuDataService.getItemsForCategory($stateParams.categoryId);
                     }]
                 }
             })
-            .state('details',{
-              url: '/details/{name}',
-              templateUrl: 'templates/items.template.html',
-              controller: 'ItemsController as itemsCtrl',
-              resolve: {
-                  items: ['ImageService','$stateParams', function(ImageService, $stateParams) {
-                      return ImageService.getImage($stateParams.name);
-                  }]
-              }
+            .state('details', {
+                url: '/details',
+                templateUrl: 'templates/details.template.html',
+                controller: 'DetailsController as detailCtrl',
+                params: {
+                    item: null
+                },
+                resolve: {
+                    images: ['ImageService', '$stateParams', function(ImageService, $stateParams) {
+                        return ImageService.getImage($stateParams.item.name);
+                    }],
+                    itemDetails: ['$stateParams', function($stateParams) {
+                        return $stateParams.item;
+                    }]
+                }
             });
     }
 })();
