@@ -1,7 +1,3 @@
-<ol class="list-group">
-    <li ng-repeat="item in $ctrl.categories" class="list-group-item">
-        <a href="#/items/{{item.short_name}}">
-            {{item.name}}
-        </a>
-    </li>
-</ol>
+<div class="list-group">
+  <a ng-repeat="item in $ctrl.categories" href="#/items/{{item.short_name}}" class="list-group-item">{{item.name}}</a>
+</div>
